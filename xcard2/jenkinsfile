@@ -1,2 +1,10 @@
-#!/bin/bash
-ijnug lmmn98y8 ojnnu ijby8tvy pkmku 7yh ubhuug 
+pipeline {
+    agent { docker { image 'maven:3.3.3' } }
+    stages {
+        stage('build') {
+            steps {
+                sh 'mvn --version'
+            }
+        }
+    }
+}
